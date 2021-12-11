@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fa198718-9365-435a-ae68-f7db84f3bea5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/src.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Configuration/AutoMapper/UnitProfile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Data/Attributes/BsonCollectionNameAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Data/Entities/BaseEntity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Data/Entities/GameClassEntity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Data/Entities/IEntity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Data/Entities/UnitEntity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Data/IDbRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Data/MongoDbContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Data/MongoDbRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Infrastructure/Data/AttackData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Infrastructure/Data/GameClassType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Infrastructure/Data/RangerGameClass.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Infrastructure/Data/Unit.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Infrastructure/EngineService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Infrastructure/Helpers/GameClassHelper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Models/AttackResult.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xpymb.testexercises.rpg.react/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xpymb.testexercises.rpg.react/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xpymb.testexercises.rpg.react/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xpymb.testexercises.rpg.react/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xpymb.testexercises.rpg.react/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xpymb.testexercises.rpg.react/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xpymb.testexercises.rpg.react/src/Data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xpymb.testexercises.rpg.react/src/Unit/AddUnit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xpymb.testexercises.rpg.react/src/Unit/CreateUnit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xpymb.testexercises.rpg.react/src/Unit/EditUnit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xpymb.testexercises.rpg.react/src/Unit/ListUnits.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xpymb.testexercises.rpg.react/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xpymb.testexercises.rpg.react/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xpymb.testexercises.rpg.react/src/reportWebVitals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Controllers/UnitController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Controllers/UnitController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Infrastructure/AttackService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Infrastructure/Data/GameClass.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Infrastructure/Data/GameClass.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Infrastructure/Data/MageGameClass.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Infrastructure/Data/MageGameClass.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Infrastructure/Data/MeleeGameClass.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Infrastructure/Data/WarriorGameClass.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Infrastructure/Data/RangeGameClass.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Infrastructure/Helpers/MathHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Infrastructure/Utils/MathUtils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Infrastructure/IAttackService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Infrastructure/IEngineService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Infrastructure/IUnitService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Infrastructure/IUnitService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Infrastructure/UnitService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Infrastructure/UnitService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Models/AttackModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Models/AttackModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Models/AttackViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Models/AttackViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Models/CreateUnitModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Models/CreateUnitModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Models/UnitModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Models/UnitModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Models/UpdateUnitModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Models/UpdateUnitModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Xpymb.TestExercises.RPG.ASP.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/Xpymb.TestExercises.RPG.ASP.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Xpymb.TestExercises.RPG.ASP/appsettings.Development.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="221W4kkPGTb0WAGA2rqlKqoatIn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Docker.xpymb.testexercises.rpg.react/Dockerfile">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="xpymb.testexercises.rpg.react/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="containerName" value="" />
+          <option name="sourceFilePath" value="xpymb.testexercises.rpg.react/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.xpymb.testexercises.rpg.react/Dockerfile" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fa198718-9365-435a-ae68-f7db84f3bea5" name="Changes" comment="" />
+      <created>1639005384430</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1639005384430</updated>
+      <workItem from="1639005385499" duration="847000" />
+      <workItem from="1639134711004" duration="54682000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
