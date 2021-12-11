@@ -1,6 +1,6 @@
-namespace Xpymb.TestExercises.RPG.ASP.Infrastructure.Helpers;
+namespace Xpymb.TestExercises.RPG.ASP.Infrastructure.Utils;
 
-public static class MathHelper
+public static class MathUtils
 {
     /// <summary>
     /// Calculate distance between two 2D points

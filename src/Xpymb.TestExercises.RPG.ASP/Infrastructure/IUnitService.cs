@@ -1,5 +1,6 @@
+using System.Linq.Expressions;
+using Xpymb.TestExercises.RPG.ASP.Data.Entities;
 using Xpymb.TestExercises.RPG.ASP.Models;
-using Xpymb.TestExercises.RPG.ASP.Infrastructure.Data;
 
 namespace Xpymb.TestExercises.RPG.ASP.Infrastructure;
 
@@ -8,8 +9,8 @@ namespace Xpymb.TestExercises.RPG.ASP.Infrastructure;
 /// </summary>
 public interface IUnitService
 {
-    Task<UnitModel> GetAsync(Guid id);
-    Task<IEnumerable<UnitModel>> GetAllAsync();
+    Task<UnitModel> GetAsync(Expression<Func<UnitEntity, bool>> selector);
+    Task<IEnumerable<UnitModel>> GetManyAsync(Expression<Func<UnitEntity, bool>> selector);
     Task<UnitModel> CreateAsync(CreateUnitModel model);
     Task<UnitModel> UpdateAsync(UpdateUnitModel model);
     Task<UnitModel> DeleteAsync(Guid id);

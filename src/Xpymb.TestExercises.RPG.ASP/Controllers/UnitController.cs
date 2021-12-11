@@ -10,30 +10,30 @@ namespace Xpymb.TestExercises.RPG.ASP.Controllers;
 public class UnitController : ControllerBase
 {
     private readonly IUnitService _unitService;
-    private readonly IAttackService _attackService;
+    private readonly IEngineService _engineService;
 
     public UnitController(
         IUnitService unitService,
-        IAttackService attackService)
+        IEngineService engineService)
     {
         _unitService = unitService;
-        _attackService = attackService;
+        _engineService = engineService;
     }
 
     [HttpGet("get")]
     public async Task<IActionResult> Get([Required] Guid id)
     {
-        var result = await _unitService.GetAsync(id);
+        var result = await _unitService.GetAsync(e => e.Id == id);
 
         return Ok(result);
     }
-
+    
     [HttpGet("list")]
     public async Task<IActionResult> GetAll()
     {
-        var result = await _unitService.GetAllAsync();
+        var result = await _unitService.GetManyAsync(e => true);
 
-        return result.Any() ? NotFound("Database is empty") : Ok(result);
+        return Ok(result);
     }
 
     [HttpPut("create")]
@@ -55,7 +55,13 @@ public class UnitController : ControllerBase
     [HttpPost("attack")]
     public async Task<IActionResult> Attack([FromBody] AttackModel model)
     {
-        var result = await _attackService.AttackAsync(model);
+        if (model.SourceUnitId.Equals(model.TargetUnitId))
+        {
+            ModelState.AddModelError("TargetUnitId", "TargetUnitId cannot be equal SourceUnitId");
+            return ValidationProblem();
+        }
+        
+        var result = await _engineService.AttackAsync(model);
 
         return Ok(result);
     }

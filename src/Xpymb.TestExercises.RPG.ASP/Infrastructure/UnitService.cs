@@ -1,3 +1,7 @@
+using System.Linq.Expressions;
+using AutoMapper;
+using Xpymb.TestExercises.RPG.ASP.Data;
+using Xpymb.TestExercises.RPG.ASP.Data.Entities;
 using Xpymb.TestExercises.RPG.ASP.Models;
 using Xpymb.TestExercises.RPG.ASP.Infrastructure.Data;
 
@@ -5,28 +9,68 @@ namespace Xpymb.TestExercises.RPG.ASP.Infrastructure;
 
 public class UnitService : IUnitService
 {
-    public Task<UnitModel> GetAsync(Guid id)
+    private readonly IDbRepository _dbRepository;
+    private readonly IMapper _mapper;
+
+    public UnitService(
+        IDbRepository dbRepository,
+        IMapper mapper)
     {
-        throw new NotImplementedException();
+        _dbRepository = dbRepository;
+        _mapper = mapper;
+    }
+    
+    public async Task<UnitModel> GetAsync(Expression<Func<UnitEntity, bool>> selector)
+    {
+        var entities = await _dbRepository.GetAsync(selector);
+        var entity = entities.FirstOrDefault();
+        
+        var result = _mapper.Map<UnitModel>(entity);
+        
+        return result;
     }
 
-    public Task<IEnumerable<UnitModel>> GetAllAsync()
+    public async Task<IEnumerable<UnitModel>> GetManyAsync(Expression<Func<UnitEntity, bool>> selector)
     {
-        throw new NotImplementedException();
+        var entities = await _dbRepository.GetAsync(selector);
+        
+        var listModels = entities.Select(entity => _mapper.Map<UnitModel>(entity)).ToList();
+
+        return listModels;
     }
 
-    public Task<UnitModel> CreateAsync(CreateUnitModel model)
+    public async Task<UnitModel> CreateAsync(CreateUnitModel model)
     {
-        throw new NotImplementedException();
+        // create unit with classtype to get predefined fields and then map with ready fields
+        var unit = new Unit
+        {
+            GameClass = GameClass.GetGameClassByEnum(model.ClassType),
+        };
+        var entity = _mapper.Map<UnitEntity>(unit);
+
+        var resultEntity = await _dbRepository.AddAsync(entity);
+        var resultModel = _mapper.Map<UnitModel>(resultEntity);
+        
+        return resultModel;
     }
 
-    public Task<UnitModel> UpdateAsync(UpdateUnitModel model)
+    public async Task<UnitModel> UpdateAsync(UpdateUnitModel model)
     {
-        throw new NotImplementedException();
+        var entity = _mapper.Map<UnitEntity>(await GetAsync(e => e.Id == model.Id));
+
+        entity.GameClass = GameClass.GetGameClassByEnum(model.ClassType);
+        
+        var resultEntity = await _dbRepository.UpdateAsync(entity);
+        var resultModel = _mapper.Map<UnitModel>(resultEntity);
+
+        return resultModel;
     }
 
-    public Task<UnitModel> DeleteAsync(Guid id)
+    public async Task<UnitModel> DeleteAsync(Guid id)
     {
-        throw new NotImplementedException();
+        var resultEntity = await _dbRepository.DeleteAsync<UnitEntity>(id);
+        var resultModel = _mapper.Map<UnitModel>(resultEntity);
+
+        return resultModel;
     }
 }
