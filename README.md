@@ -22,7 +22,7 @@ Frontend:
 - axios
 
 <h2>Issues</h2>
-- docker-compose: asp.net образ подгружается с docker hub, из-за того что при создания образа с помощью docker-cli возникает ошибка: "Program does not contain static Main", на данный момент образ создан при помощи VS 2020  
+- docker-compose: asp.net образ подгружается с docker hub, из-за того что при создания образа с помощью docker-cli возникает ошибка: "Program does not contain static Main", на данный момент образ создан при помощи VS 2022  
 
 <h2>Как запустить?</h2>
 
