@@ -51,7 +51,7 @@ Containers:
 
 - <code>docker-compose up -d</code>
 
-Будет запущен контейнер с следующими адресами:
+Будет запущен контейнер со следующими адресами:
 
 - <code>http://localhost:5068</code> Backend (ASP.NET Core)
 - <code>http://localhost:3000</code> Frontend (React)
