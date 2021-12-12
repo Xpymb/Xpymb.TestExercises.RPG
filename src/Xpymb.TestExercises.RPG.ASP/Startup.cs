@@ -44,7 +44,7 @@ namespace Xpymb.TestExercises.RPG.ASP
         {
             app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:3000"));
             
-            if (env.IsDevelopment())
+            if (env.IsDevelopment() || env.EnvironmentName == "DockerDevelopment")
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
