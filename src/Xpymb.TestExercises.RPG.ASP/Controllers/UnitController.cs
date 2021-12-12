@@ -23,6 +23,11 @@ public class UnitController : ControllerBase
     [HttpGet("get")]
     public async Task<IActionResult> Get([Required] Guid id)
     {
+        if (!ModelState.IsValid)
+        {
+            return ValidationProblem();
+        }
+        
         var result = await _unitService.GetAsync(e => e.Id == id);
 
         return Ok(result);
@@ -39,6 +44,11 @@ public class UnitController : ControllerBase
     [HttpPut("create")]
     public async Task<IActionResult> Create([FromBody] CreateUnitModel model)
     {
+        if (!ModelState.IsValid)
+        {
+            return ValidationProblem();
+        }
+        
         var result = await _unitService.CreateAsync(model);
         
         return Ok(result);
@@ -47,6 +57,11 @@ public class UnitController : ControllerBase
     [HttpPost("edit")]
     public async Task<IActionResult> Update([FromBody] UpdateUnitModel model)
     {
+        if (!ModelState.IsValid)
+        {
+            return ValidationProblem();
+        }
+        
         var result = await _unitService.UpdateAsync(model);
 
         return Ok(result);
@@ -55,6 +70,11 @@ public class UnitController : ControllerBase
     [HttpPost("attack")]
     public async Task<IActionResult> Attack([FromBody] AttackModel model)
     {
+        if (!ModelState.IsValid)
+        {
+            return ValidationProblem();
+        }
+        
         if (model.SourceUnitId.Equals(model.TargetUnitId))
         {
             ModelState.AddModelError("TargetUnitId", "TargetUnitId cannot be equal SourceUnitId");
@@ -67,7 +87,7 @@ public class UnitController : ControllerBase
     }
 
     [HttpDelete("remove")]
-    public async Task<IActionResult> Delete(Guid id)
+    public async Task<IActionResult> Delete([Required] Guid id)
     {
         var result = await _unitService.DeleteAsync(id);
 
