@@ -2,9 +2,11 @@ version: "3.9"
 
 services:
   asp:
-    build:
-      context: ./src/Xpymb.TestExercises.RPG.ASP
-      dockerfile: Dockerfile
+    image: xpymb/rpgasp
+    restart: always
+    environment:
+      ASPNETCORE_URLS: http://+:5068
+      ASPNETCORE_ENVIRONMENT: Development
     ports:
       - 5068:5068
   
