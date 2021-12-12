@@ -9,7 +9,6 @@
 
 Backend:
 - .NET 6
-- docker-compose
 - MongoDb
 - MongoDbExpress
 - Swagger
@@ -20,6 +19,9 @@ Frontend:
 - react-router-dom
 - react-select
 - axios
+
+Containers:
+- docker-compose
 
 <h2>Issues</h2>
 - docker-compose: asp.net образ подгружается с docker hub, из-за того что при создания образа с помощью docker-cli возникает ошибка: "Program does not contain static Main", на данный момент образ создан при помощи VS 2022  
