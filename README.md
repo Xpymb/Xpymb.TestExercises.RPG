@@ -238,12 +238,50 @@ http://localhost:5068/api/unit/list
 </table>
 <br></br>
 
-<h3>3) Создать новую запись с информацией об игре в базе данных</h3>
+<h3>3) Создать нового юнита </h3>
 
 Адрес: <code>http://localhost:5068/api/unit/list</code>
 
 
 Тип метода: PUT
+
+Описание: при вызове создаётся юнит с выбранным классом, но случайными характеристиками. 
+
+<table>
+    <tr>
+        <td>Характеристика</td> <td>Диапазон значений</td>
+    </tr>
+    <tr>
+        <td>id</td> <td>Случайный Guid</td>
+    </tr>
+    <tr>
+        <td>hp</td> <td>100</td>
+    </tr>
+    <tr>
+        <td>maxHp</td> <td>100</td>
+    </tr>
+    <tr>
+        <td>mana</td> <td>100</td>
+    </tr>
+    <tr>
+        <td>maxMana</td> <td>100</td>
+    </tr>
+    <tr>
+        <td>armor</td> <td>5..10</td>
+    </tr>
+    <tr>
+        <td>magicResist</td> <td>5..10</td>
+    </tr>
+    <tr>
+        <td>x</td> <td>50..100</td>
+    </tr>
+    <tr>
+        <td>y</td> <td>50..100</td>
+    </tr>
+    <tr>
+        <td>gameClass</td> <td> classType: enum класс из запроса; <br> damageType: enum в зависимости от выбранного класса; <br> maxAttackRadius: в зависимости от класса (Warrior: 10, Ranger: 350, Mage: 150); <br> Damage: 5..20</td>
+    </tr>
+</table>
 
 <table>
     <tr>Тело запроса:</tr>
@@ -327,7 +365,7 @@ http://localhost:5068/api/unit/list
 </table>
 <br></br>
 
-<h3>4) Изменить юнита</h3>
+<h3>4) Редактировать юнита</h3>
 
 Адрес: <code>http://localhost:5068/api/unit/edit</code>
 
