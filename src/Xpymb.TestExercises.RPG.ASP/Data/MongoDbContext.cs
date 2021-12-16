@@ -8,19 +8,14 @@ public class MongoDbContext
 {
     public IMongoClient Client { get; }
     public IMongoDatabase Database { get; }
-    public IMongoCollection<UnitEntity> Units { get; }
 
     public MongoDbContext(
         IConfiguration configuration)
     {
         var connectionString = configuration["MongoDb:ConnectionString"];
         
-        var connection = new MongoUrlBuilder(connectionString);
-        
         Client = new MongoClient(connectionString);
         Database = Client.GetDatabase("gamedb");
-
-        Units = Database.GetCollection<UnitEntity>("Units");
     }
 
     public IMongoCollection<T> GetCollection<T>() where T : IEntity
