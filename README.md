@@ -57,6 +57,14 @@ Containers:
 - <code>http://localhost:27017</code> Database (MongoDb)
 - <code>http://localhost:8081</code> ВBMS (MongoDb Express)
 
+<h2>Роуты SPA</h2>
+
+- / - ведет в корень SPA. Перенаправляет на list;
+- /list - отображает список юнитов;
+- /create - окно создания юнита
+- /edit - окно редактирования юнита
+<br>
+
 <h2>Описание API-методов</h2>
 
 Для удобной навигации по REST-API методам был сконфигурирован Swagger, перейти к нему можно по адресу: 
