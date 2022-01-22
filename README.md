@@ -1,9 +1,10 @@
 # Xpymb.TestExercises.RPG
 
-<h2>Описание</h2>
+Тестовое задание на вакансию, выполнено по ТЗ. 
+
+<h2>Задача</h2>
 Реализовать SPA приложение ( asp.net core + react.js ) представляющее собой хранилище данных рпг-игры. В качестве базы данных предлагается использовать Mongodb. Сервис должен запускаться в Docker контейнерах с помощью docker-compose.
-
-
+<br><br>
 
 Использовано:
 
@@ -57,6 +58,14 @@ Containers:
 - <code>http://localhost:3000</code> Frontend (React)
 - <code>http://localhost:27017</code> Database (MongoDb)
 - <code>http://localhost:8081</code> ВBMS (MongoDb Express)
+
+<h2>Роуты SPA</h2>
+
+- / - ведет в корень SPA. Перенаправляет на list;
+- /list - отображает список юнитов;
+- /create - окно создания юнита
+- /edit - окно редактирования юнита
+<br>
 
 <h2>Описание API-методов</h2>
 
