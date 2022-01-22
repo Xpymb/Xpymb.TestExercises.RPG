@@ -252,7 +252,7 @@ http://localhost:5068/api/unit/list
 Адрес: <code>http://localhost:5068/api/unit/list</code>
 
 
-Тип метода: PUT
+Тип метода: POST
 
 Описание: при вызове создаётся юнит с выбранным классом, но случайными характеристиками. 
 
@@ -379,7 +379,7 @@ http://localhost:5068/api/unit/list
 Адрес: <code>http://localhost:5068/api/unit/edit</code>
 
 
-Тип метода: POST
+Тип метода: PUT
 
 <table>
     <tr>Тело запроса:</tr>
@@ -404,67 +404,6 @@ http://localhost:5068/api/unit/edit
       "id": "ba170130-dd1f-4ecf-aca4-3efc39b7e858",
       "classType": 1
     }
-
-Пример ответа:
-
-    {
-      "id": "ba170130-dd1f-4ecf-aca4-3efc39b7e858",
-      "hp": 100,
-      "maxHp": 100,
-      "mana": 100,
-      "maxMana": 100,
-      "armor": 8,
-      "magicResist": 6,
-      "x": 75,
-      "y": 79,
-      "gameClass": {
-        "classType": 1,
-        "damageType": 0,
-        "maxAttackRadius": 350,
-        "damage": 14
-      }
-    }
-
-<table>
-    <tr>Параметры ответа:</tr>
-    <tr>
-        <td>Параметр</td> <td>Описание</td>
-    </tr>
-    <tr>
-        <td>id</td> <td>Id юнита</td>
-    </tr>
-    <tr>
-        <td>hp</td> <td>Количество HP юнита (в процентах)</td>
-    </tr>
-    <tr>
-        <td>maxHp</td> <td>Максимальное количество HP юнита (в процентах)</td>
-    </tr>
-    <tr>
-        <td>mana</td> <td>Количество маны юнита (в процентах)</td>
-    </tr>
-    <tr>
-        <td>maxMana</td> <td>Максимальное количество маны юнита (в процентах)</td>
-    </tr>
-    <tr>
-        <td>armor</td> <td>Физическая броня юнита</td>
-    </tr>
-    <tr>
-        <td>magicResist</td> <td>Магическая броня юнита</td>
-    </tr>
-    <tr>
-        <td>x</td> <td>Положение юнита по оси X</td>
-    </tr>
-    <tr>
-        <td>y</td> <td>Положение юнита по оси Y</td>
-    </tr>
-    <tr>
-        <td>gameClass</td> <td>Структура класса юнита: <br> 
-      classType - класс юнита в enum; <br> 
-      damageType - тип урона юнита; <br>
-      maxRadius - максимальная дальность атаки юнита; <br>
-      damage - урон юнита</td>
-    </tr>
-</table>
 <br></br>
 
 Изменения в базе данных:
@@ -627,67 +566,6 @@ http://localhost:5068/api/unit/attack
 Пример запроса:
 
 http://localhost:5068/api/unit/remove?id=ba170130-dd1f-4ecf-aca4-3efc39b7e858
-
-Пример ответа:
-
-    {
-      "id": "ba170130-dd1f-4ecf-aca4-3efc39b7e858",
-      "hp": 100,
-      "maxHp": 100,
-      "mana": 100,
-      "maxMana": 100,
-      "armor": 8,
-      "magicResist": 6,
-      "x": 75,
-      "y": 79,
-      "gameClass": {
-        "classType": 1,
-        "damageType": 0,
-        "maxAttackRadius": 350,
-        "damage": 6
-      }
-    }
-
-<table>
-    <tr>Параметры ответа:</tr>
-    <tr>
-        <td>Параметр</td> <td>Описание</td>
-    </tr>
-    <tr>
-        <td>id</td> <td>Id юнита</td>
-    </tr>
-    <tr>
-        <td>hp</td> <td>Количество HP юнита (в процентах)</td>
-    </tr>
-    <tr>
-        <td>maxHp</td> <td>Максимальное количество HP юнита (в процентах)</td>
-    </tr>
-    <tr>
-        <td>mana</td> <td>Количество маны юнита (в процентах)</td>
-    </tr>
-    <tr>
-        <td>maxMana</td> <td>Максимальное количество маны юнита (в процентах)</td>
-    </tr>
-    <tr>
-        <td>armor</td> <td>Физическая броня юнита</td>
-    </tr>
-    <tr>
-        <td>magicResist</td> <td>Магическая броня юнита</td>
-    </tr>
-    <tr>
-        <td>x</td> <td>Положение юнита по оси X</td>
-    </tr>
-    <tr>
-        <td>y</td> <td>Положение юнита по оси Y</td>
-    </tr>
-    <tr>
-        <td>gameClass</td> <td>Структура класса юнита: <br> 
-      classType - класс юнита в enum; <br> 
-      damageType - тип урона юнита; <br>
-      maxRadius - максимальная дальность атаки юнита; <br>
-      damage - урон юнита</td>
-    </tr>
-</table>
 <br></br>
 
 <h2>Schemas</h2>
