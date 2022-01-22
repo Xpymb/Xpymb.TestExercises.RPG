@@ -24,6 +24,8 @@ Frontend:
 Containers:
 - docker-compose
 
+RESTful API оформлено с учётом рекомендаций с сайта Microsoft, но с установленными ТЗ марщрутами: <code>https://docs.microsoft.com/ru-ru/azure/architecture/best-practices/api-design</code>
+
 <h2>Issues</h2>
 - docker-compose: asp.net образ подгружается с docker hub, из-за того что при создания образа с помощью docker-cli возникает ошибка: "Program does not contain static Main", на данный момент образ создан при помощи VS 2022  
 
