@@ -51,10 +51,10 @@ public class UnitController : ControllerBase
         
         var result = await _unitService.CreateAsync(model);
         
-        return Ok(result);
+        return CreatedAtRoute(new { id = result.Id }, result);
     }
 
-    [HttpPost("edit")]
+    [HttpPatch("edit")]
     public async Task<IActionResult> Update([FromBody] UpdateUnitModel model)
     {
         if (!ModelState.IsValid)
@@ -64,7 +64,7 @@ public class UnitController : ControllerBase
         
         var result = await _unitService.UpdateAsync(model);
 
-        return Ok(result);
+        return NoContent();
     }
 
     [HttpPost("attack")]
@@ -91,6 +91,11 @@ public class UnitController : ControllerBase
     {
         var result = await _unitService.DeleteAsync(id);
 
-        return Ok(result);
+        if (result is null)
+        {
+            return NotFound();
+        }
+        
+        return NoContent();
     }
 }
