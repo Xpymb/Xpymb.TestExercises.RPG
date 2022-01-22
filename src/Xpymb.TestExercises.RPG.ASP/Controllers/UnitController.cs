@@ -41,7 +41,7 @@ public class UnitController : ControllerBase
         return Ok(result);
     }
 
-    [HttpPut("create")]
+    [HttpPost("create")]
     public async Task<IActionResult> Create([FromBody] CreateUnitModel model)
     {
         if (!ModelState.IsValid)
@@ -54,7 +54,7 @@ public class UnitController : ControllerBase
         return CreatedAtRoute(new { id = result.Id }, result);
     }
 
-    [HttpPatch("edit")]
+    [HttpPut("edit")]
     public async Task<IActionResult> Update([FromBody] UpdateUnitModel model)
     {
         if (!ModelState.IsValid)
